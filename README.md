@@ -4,6 +4,7 @@
 ## Requirements
 - Selenium
 - Geckodriver
+- Firefox
 
 ## Install
 
