@@ -5,6 +5,7 @@
 - Selenium
 - Geckodriver
 - Firefox
+- python 3+
 
 ## Install
 
