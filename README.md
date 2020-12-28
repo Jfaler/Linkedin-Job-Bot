@@ -13,7 +13,12 @@
 pip install -r requirements.txt
 ```
 
-2. Install & extract [Gecko Driver](https://github.com/mozilla/geckodriver/releases)
+2. Install & extract [Gecko Driver](https://github.com/mozilla/geckodriver/releases) to the same folder where main.py is located.
+```
+- requirements.txt
+- main.py
+- geckodriver.exe
+```
 
 3. run main.py
 ```
