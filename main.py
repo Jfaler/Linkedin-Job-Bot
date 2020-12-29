@@ -85,3 +85,32 @@ time.sleep(1)
 checkmarck_filter = driver.find_element_by_xpath("//button[@class='search-advanced-facets__button--apply ml4 mr2 artdeco-button artdeco-button--3 "
             "artdeco-button--primary ember-view']")
 checkmarck_filter.click()
+
+all_listings = driver.find_elements_by_css_selector(".job-card-container--clickable")
+
+for listing in all_listings:
+    print("Applying Now")
+    listing.click()
+    time.sleep(5)
+    try:
+        time.sleep(5)
+        submit_button = driver.find_element_by_css_selector("footer button")
+        if submit_button.get_attribute("data-control-name") == "continue_unify":
+            close_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
+            close_button.click()
+
+            time.sleep(2)
+            discard_button = driver.find_elements_by_class_name("artdeco-modal__confirm-dialog-btn")[1]
+            discard_button.click()
+            print("Complex application, skipped.")
+            continue
+        else:
+            submit_button.click()
+
+        time.sleep(2)
+        close_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
+        close_button.click()
+
+    except NoSuchElementException:
+        print("No application button, skipped.")
+        continue
