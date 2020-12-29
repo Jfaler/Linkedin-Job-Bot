@@ -1,4 +1,4 @@
-# Linkedin-Job-Bot (Work In Progress)
+# Linkedin-Job-Bot
 🕴️ Open source LinkedIn job bot.
 
 ## Requirements
@@ -25,3 +25,6 @@ pip install -r requirements.txt
 ```
 python main.py
 ```
+
+### TODO
+Fix loop through listing
